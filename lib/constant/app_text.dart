@@ -12,3 +12,17 @@ const menu = "মেনু";
 const inbox = "ইনবক্স";
 const dashboard = "ড্যাশবোর্ড";
 const profile = "প্রোফাইল";
+
+//dashboard screen text
+const goodMorning = "শুভ সকাল ";
+const name = "হাফিয নকিব";
+const school = "ইস্কুল - ";
+const welcomeText = "এ আপনাকে স্বাগতম";
+//days
+const sat = "শনি";
+const sun = "রবি";
+const mon = "সোম";
+const tue = "মঙ্গল";
+const wed = "বুধ";
+const thur = "বৃহঃ";
+const fri = "শুক্র";
