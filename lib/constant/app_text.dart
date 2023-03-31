@@ -6,3 +6,9 @@ const forgorPassword = "পাসওয়ার্ড ভুলে গিয়েছ
 const clickHere = " এখানে ক্লিক করুন";
 const loginBtn = "প্রবেশ করুন";
 const newAccount = "নতুন নিবন্ধনের জন্যে";
+
+//bottom navigation bar text
+const menu = "মেনু";
+const inbox = "ইনবক্স";
+const dashboard = "ড্যাশবোর্ড";
+const profile = "প্রোফাইল";

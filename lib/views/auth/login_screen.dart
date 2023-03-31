@@ -2,9 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:school_app/constant/app_text.dart';
+import 'package:school_app/views/screens/bottom_navigation.dart';
 
 import '../../constant/image_path.dart';
+import 'components/custom_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -56,7 +59,9 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 40.h),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(()=>BottomNavigatonScreen());
+                  },
                   child: Container(
                     height: 46.h,
                     width: 240.w,
@@ -108,34 +113,6 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class CustomTextField extends StatelessWidget {
-  final String hintText;
-  const CustomTextField({
-    super.key,
-    required this.hintText,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        hintText: hintText,
-        hintStyle: TextStyle(
-          color: Color(0xFF223E4B).withOpacity(.50),
-          fontSize: 14.sp,
-          fontWeight: FontWeight.w500,
-        ),
-        border: OutlineInputBorder(
-          borderSide: BorderSide.none,
-          borderRadius: BorderRadius.circular(10.r),
-        ),
-        fillColor: Color(0xFFFAFAFA),
-        filled: true,
       ),
     );
   }
