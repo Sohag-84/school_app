@@ -22,7 +22,7 @@ class OtherSection extends StatelessWidget {
           ),
         ),
         SizedBox(height: 18.h),
-         SizedBox(
+        SizedBox(
           height: 108.h,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -35,7 +35,6 @@ class OtherSection extends StatelessWidget {
             },
           ),
         ),
-      
       ],
     );
   }

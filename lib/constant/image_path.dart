@@ -18,3 +18,6 @@ const icBusiness = "assets/icons/business.png";
 const icClass = "assets/icons/class.png";
 const icGrade = "assets/icons/grade.png";
 const icRoutine = "assets/icons/routine.png";
+
+//exam section
+const icBiology = "assets/icons/biology.png";

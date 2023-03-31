@@ -41,3 +41,16 @@ const other = "অন্যান্য";
 const classText = "শ্রেণী কার্যক্রম";
 const grade = "গ্রেড শীট";
 const routine = "রুটিন";
+
+//exam section
+const exam = "পরীক্ষাসমূহ";
+const generalMath = "সাধারণ গণিত";
+const date = "সোম ০৫";
+const time1 = "১১:৩০";
+const time2 = "১২:০০";
+const month = "৭ই আগষ্ট";
+const chapter = "অধ্যায় : ";
+const mathNumber = "১৪, ১৫(সরল অংক)";
+const fullMark = "পূর্ণমান : ";
+const mark = "২০";
+const biology = "জীব বিজ্ঞান";
