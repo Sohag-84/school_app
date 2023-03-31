@@ -5,13 +5,13 @@ import 'package:school_app/views/screens/dashboard_screen/dashboard_screen.dart'
 import 'app_text.dart';
 
 const List pageList = [
-  DashboardScreen(),
   Center(
     child: Text(menu),
   ),
   Center(
     child: Text(inbox),
   ),
+  DashboardScreen(),
   Center(
     child: Text(profile),
   ),

@@ -3,24 +3,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:school_app/constant/app_colors.dart';
-import 'package:school_app/views/screens/dashboard_screen/widgets/custom_row_text.dart';
+import 'package:school_app/constant/app_text.dart';
 
-import '../../../../constant/app_text.dart';
+import 'custom_row_text.dart';
 import 'custom_text.dart';
 
-class CustomExamContainer extends StatelessWidget {
-  final String subject;
+class CustomClassActivitiesContainer extends StatelessWidget {
   final image;
-  const CustomExamContainer({
+  final String bookName,
+      monthName,
+      dateName,
+      typeName,
+      chapterName,
+      opinionName;
+  const CustomClassActivitiesContainer({
     super.key,
-    required this.subject,
     required this.image,
+    required this.bookName,
+    required this.monthName,
+    required this.dateName,
+    required this.typeName,
+    required this.chapterName,
+    required this.opinionName,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 175.h,
+      height: 200.h,
       width: 335.w,
       padding: EdgeInsets.all(16.w),
       decoration: BoxDecoration(
@@ -43,38 +53,28 @@ class CustomExamContainer extends StatelessWidget {
                   child: Image.asset(image, height: 30.h, width: 30.w),
                 ),
               ),
-              SizedBox(width: 14.w),
+              SizedBox(width: 10.w),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    subject,
+                    bookName,
                     style: TextStyle(
                       fontSize: 16.sp,
                       fontWeight: FontWeight.w700,
                       color: selectedColor,
                     ),
                   ),
-                  SizedBox(height: 5.h),
+                  SizedBox(height: 4.h),
                   Row(
                     children: [
-                      Icon(
-                        Icons.alarm,
-                        color: Color(0xFF27A7CF),
-                        size: 15.h,
-                      ),
-                      SizedBox(width: 2.w),
-                      CustomText(text: time1),
-                      CustomText(text: "-"),
-                      CustomText(text: time2),
-                      SizedBox(width: 15.w),
                       Icon(
                         Icons.calendar_month,
                         color: Color(0xFF27A7CF),
                         size: 15.h,
                       ),
                       SizedBox(width: 4.w),
-                      CustomText(text: month)
+                      CustomText(text: monthName)
                     ],
                   ),
                 ],
@@ -83,15 +83,17 @@ class CustomExamContainer extends StatelessWidget {
               CustomText(text: date)
             ],
           ),
-          SizedBox(height: 10.h),
+          SizedBox(height: 8.h),
           SizedBox(
             width: 303.w,
             child: Divider(),
           ),
-          SizedBox(height: 10.h),
-          CustomTextRow(title1: chapter, title2: mathNumber),
-          SizedBox(height: 10.h),
-          CustomTextRow(title1: fullMark, title2: mark),
+          SizedBox(height: 8.h),
+          CustomTextRow(title1: type, title2: typeName),
+          SizedBox(height: 8.h),
+          CustomTextRow(title1: chapter, title2: chapterName),
+          SizedBox(height: 8.h),
+          CustomTextRow(title1: opinion, title2: opinionName),
         ],
       ),
     );

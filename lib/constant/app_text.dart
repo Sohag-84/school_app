@@ -54,3 +54,14 @@ const mathNumber = "১৪, ১৫(সরল অংক)";
 const fullMark = "পূর্ণমান : ";
 const mark = "২০";
 const biology = "জীব বিজ্ঞান";
+
+//class activites section
+const classActivities = "শ্রেনী কার্যক্রম";
+const type = "ধরণ : ";
+const homeWork = "হোম ওয়ার্ক";
+const opinion = "মন্তব্য: ";
+const chapterName = "কোষ বিভাজন";
+const question = "সৃজনশীল ১ - ৩";
+const physics = "পদার্থ বিজ্ঞান";
+const assignment = "এসাইনমেন্ট";
+const chapterName2 = "স্থির তড়িৎ";
