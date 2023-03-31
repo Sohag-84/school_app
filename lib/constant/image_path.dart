@@ -8,3 +8,13 @@ const icProfile = "assets/icons/profile.png";
 
 //dashboard screen image
 const imgProfile = "assets/images/profile.jpeg";
+
+//course icon
+const icScience = "assets/icons/science.png";
+const icMath = "assets/icons/math.png";
+const icBusiness = "assets/icons/business.png";
+
+//others section icon
+const icClass = "assets/icons/class.png";
+const icGrade = "assets/icons/grade.png";
+const icRoutine = "assets/icons/routine.png";

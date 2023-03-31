@@ -26,3 +26,18 @@ const tue = "মঙ্গল";
 const wed = "বুধ";
 const thur = "বৃহঃ";
 const fri = "শুক্র";
+
+const courses = "কোর্সসমূহ";
+const seeAll = "সবগুলো দেখুন";
+const science = "বিজ্ঞান";
+const math = "গণিত";
+const business = "ব্যবসা শিক্ষা";
+const homeScience = "গার্হস্থ্য বিজ্ঞান";
+const arts = "চারুপাঠ";
+const physicalEdu = "শারীরিক শিক্ষা";
+
+//others section
+const other = "অন্যান্য";
+const classText = "শ্রেণী কার্যক্রম";
+const grade = "গ্রেড শীট";
+const routine = "রুটিন";
