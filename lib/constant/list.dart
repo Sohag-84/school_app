@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:school_app/constant/image_path.dart';
 import 'package:school_app/views/screens/dashboard_screen/dashboard_screen.dart';
+import 'package:school_app/views/screens/menu_screen.dart/menu_screen.dart';
 
 import 'app_text.dart';
 
 const List pageList = [
-  Center(
-    child: Text(menu),
-  ),
+  MenuScreen(),
   Center(
     child: Text(inbox),
   ),
