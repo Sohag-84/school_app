@@ -1,9 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:school_app/models/post_model.dart';
 import 'package:school_app/services/api_services.dart';
+
+import 'components/add_post_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({Key? key}) : super(key: key);
@@ -27,12 +30,27 @@ class MenuScreen extends StatelessWidget {
                       title: Text(data.title.toString()),
                       subtitle: Text(data.body.toString()),
                       trailing: SizedBox(
-                        width: 80.w,
+                        width: 100.w,
                         child: Row(
                           children: [
-                            IconButton(onPressed: null, icon: Icon(Icons.edit)),
                             IconButton(
-                                onPressed: null, icon: Icon(Icons.delete)),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                    fullscreenDialog: true,
+                                    builder: (context) => AddPostScreen(
+                                        post: data, isUpdate: true),
+                                  ),
+                                );
+                              },
+                              icon: Icon(Icons.edit),
+                            ),
+                            IconButton(
+                                onPressed: () {
+                                  ApiServices().deletePost(data);
+                                },
+                                icon: Icon(Icons.delete)),
                           ],
                         ),
                       ),
@@ -43,7 +61,15 @@ class MenuScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            CupertinoPageRoute(
+              fullscreenDialog: true,
+              builder: (context) => AddPostScreen(isUpdate: false),
+            ),
+          );
+        },
         child: Icon(Icons.add),
       ),
     );

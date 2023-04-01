@@ -1,47 +1,24 @@
-import 'dart:convert';
-
-/// userId : 1
-/// id : 1
-/// title : "sunt aut facere repellat provident occaecati excepturi optio reprehenderit"
-/// body : "quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto"
-PostModel postModelFromJson(String str) => PostModel.fromJson(json.decode(str));
-String postModelToJson(PostModel data) => json.encode(data.toJson());
-
 class PostModel {
-  PostModel({
-    int? userId,
-    int? id,
-    String? title,
-    String? body,
-  }) {
-    _userId = userId;
-    _id = id;
-    _title = title;
-    _body = body;
-  }
+  int? userId;
+  int? id;
+  String? title;
+  String? body;
 
-  PostModel.fromJson(dynamic json) {
-    _userId = json['userId'];
-    _id = json['id'];
-    _title = json['title'];
-    _body = json['body'];
-  }
-  int? _userId;
-  int? _id;
-  String? _title;
-  String? _body;
+  PostModel({this.userId, this.id, this.title, this.body});
 
-  int? get userId => _userId;
-  int? get id => _id;
-  String? get title => _title;
-  String? get body => _body;
+  PostModel.fromJson(Map<String, dynamic> json) {
+    userId = json['userId'];
+    id = json['id'];
+    title = json['title'];
+    body = json['body'];
+  }
 
   Map<String, dynamic> toJson() {
-    final map = <String, dynamic>{};
-    map['userId'] = _userId;
-    map['id'] = _id;
-    map['title'] = _title;
-    map['body'] = _body;
-    return map;
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['userId'] = this.userId;
+    data['id'] = this.id;
+    data['title'] = this.title;
+    data['body'] = this.body;
+    return data;
   }
 }
