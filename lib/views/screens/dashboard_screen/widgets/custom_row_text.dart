@@ -20,16 +20,18 @@ class CustomTextRow extends StatelessWidget {
           Text(
             title1,
             style: TextStyle(
-                color: Color(0xFF27A7B8),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w500),
+              color: Color(0xFF27A7B8),
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w500,
+            ),
           ),
           Text(
             title2,
             style: TextStyle(
-                color: Color(0xFF27A7B8),
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w600,),
+              color: Color(0xFF223E4B).withOpacity(.80),
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ],
       ),
